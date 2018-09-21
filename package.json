@@ -1,0 +1,35 @@
+{
+  "name": "study-desk",
+  "version": "1.0.0",
+  "description": "A web application for students to group study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazislam/Study-Desk.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "express",
+    "angular"
+  ],
+  "author": "Naz Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazislam/Study-Desk/issues"
+  },
+  "homepage": "https://github.com/nazislam/Study-Desk#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": ["node_modules/**/node_modules"],
+    "delay": "2500" 
+  }
+}
