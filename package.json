@@ -24,12 +24,17 @@
   },
   "homepage": "https://github.com/nazislam/Study-Desk#readme",
   "dependencies": {
+    "@google-cloud/datastore": "^1.4.2",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "pug": "^2.0.3"
   },
   "nodemonConfig": {
     "restartable": "rs",
-    "ignore": ["node_modules/**/node_modules"],
-    "delay": "2500" 
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500"
   }
 }
