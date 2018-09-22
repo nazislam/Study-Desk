@@ -15,11 +15,11 @@ export class RegisterComponent implements OnInit {
   model = new User('Naz', 'Islam');
 
   submitForm(form: NgForm) {
-    /*
-    console.log(this.model);
-    console.log(form.value);
-    */
-    this.registerService.postUser(this.model);
+    this.registerService.postUser(this.model)
+      .subscribe(
+        data => console.log('success:', data),
+        err => console.log('error:', err)
+      );
   }
 
   ngOnInit() {

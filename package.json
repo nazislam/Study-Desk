@@ -26,11 +26,15 @@
   "dependencies": {
     "@google-cloud/datastore": "^1.4.2",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
+    "formidable": "^1.2.1",
+    "http": "0.0.0",
     "nconf": "^0.10.0",
     "nodemon": "^1.18.4",
     "path": "^0.12.7",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "util": "^0.11.0"
   },
   "nodemonConfig": {
     "restartable": "rs",
