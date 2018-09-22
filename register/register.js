@@ -5,6 +5,10 @@ const bodyParser = require('body-parser');
 registerRouter.use(bodyParser.json());
 registerRouter.use(bodyParser.urlencoded({extended: false}));
 
+function getModel() {
+  return require('./model-datastore');
+}
+
 registerRouter.route('/')
   .get(function(req, res) {
     res.render('register');
@@ -12,6 +16,7 @@ registerRouter.route('/')
   .post(function(req, res) {
     const data = req.body;
     console.log(data);
+    getModel().createUser(data);
     res.send('submitted');
   });
 
