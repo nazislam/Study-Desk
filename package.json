@@ -38,5 +38,8 @@
       "node_modules/**/node_modules"
     ],
     "delay": "2500"
+  },
+  "devDependencies": {
+    "@angular/cli": "^6.2.3"
   }
 }
