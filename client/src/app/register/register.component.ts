@@ -12,7 +12,8 @@ export class RegisterComponent implements OnInit {
   constructor(private registerService: RegisterService) {
   }
     
-  model = new User('Naz', 'Islam');
+  universities = ['SUNY Plattsburgh', 'SUNY Binghamton', 'SUNY Jefferson']
+  model = new User('Naz', 'Islam', 'male', 'cs', 'plt', 'naz@nazislam.com', 'pwd');
 
   submitForm(form: NgForm) {
     this.registerService.postUser(this.model)
