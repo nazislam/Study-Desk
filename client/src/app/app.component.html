@@ -6,13 +6,46 @@
   <base href="/">
 </head>
 <body>
-  <h1>Welcome to Study Desk!</h1>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/']">Study Desk</a>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/register']">Sign Up</a>
+        <!-- <a class="nav-item nav-link" href='http://localhost:3000/register'>fign Up</a> -->
+        <a class="nav-item nav-link" href="#">Log In</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid" id='hero'>
+      <div class="row">
+        <div class="col-md-5">
+          <h1>Welcome to Study Desk!</h1>
+          <p>A new perspective of group study</p>
+        </div>
+        <div class="col-md-7">
+          <img src="../assets/img/group-work.jpg" alt="" id='img-gw'>
+        </div>
+      </div>
+  </div>
+
+
+
+  <!-- 
   <ul>
     <li><a [routerLink]="['/']">Home</a></li>
     <li><a [routerLink]="['/register']">Register</a></li>
     <li>Sign In</li>
   </ul>
+  -->
+
+
+
+
 
   <router-outlet></router-outlet>
+
 </body>
 </html>
