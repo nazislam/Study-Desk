@@ -22,15 +22,3 @@ h1, h2 {
 body {
   font-family: gotham-book;
 }
-#hero {
-  color: white;
-  padding: 80px 40px 80px 40px;
-  background: #02173f;
-}
-
-#img-gw {
-  width: 700px;
-  height: 350px;
-  border: 2px solid #02173f;
-  border-radius: 30px;
-}
