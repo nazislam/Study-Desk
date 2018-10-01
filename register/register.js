@@ -17,7 +17,6 @@ registerRouter.route('/')
     const data = req.body;
     console.log(data);
     getModel().createUser(data);
-    res.send('submitted');
   });
 
 module.exports = registerRouter;
