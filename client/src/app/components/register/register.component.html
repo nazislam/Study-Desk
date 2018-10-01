@@ -1,6 +1,6 @@
 <div class="container">
   <h2> Let's get started now!</h2>
-  <p>Or create an account if not registered yet</p>
+  <p>Or <a [routerLink]="['/signin']">Create an account</a> if not registered yet</p>
 
   <form #form='ngForm' (submit)="submitForm(form)" novalidate>
     <div class="form-group">
