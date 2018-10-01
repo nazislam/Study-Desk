@@ -31,4 +31,16 @@ export class RegisterService {
       .catch(this.handleError);
   }
 
+  authenticateUser(user: User): Observable<any> {
+    // console.log('posting user: ', user);
+    let body = JSON.stringify(user);
+    let headers = new Headers({ 'Content-Type': 'application/json'});
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http.post('http://localhost:3000/signin', body, options)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+
 }
