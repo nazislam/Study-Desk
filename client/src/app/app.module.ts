@@ -5,20 +5,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { RegisterService } from './register/register.service';
+import { RegisterComponent } from './components/register/register.component';
+import { RegisterService } from './components/register/register.service';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavigationComponent,
+    HomepageComponent
   ],
   imports: [
     HttpModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
+      {path: '', component: HomepageComponent},
       {path: 'register', component: RegisterComponent}
     ])
   ],
