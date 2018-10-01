@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { RegisterService } from './components/register/register.service';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     AppComponent,
     RegisterComponent,
     NavigationComponent,
-    HomepageComponent
+    HomepageComponent,
+    SigninComponent
   ],
   imports: [
     HttpModule,
@@ -24,7 +26,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     FormsModule,
     RouterModule.forRoot([
       {path: '', component: HomepageComponent},
-      {path: 'register', component: RegisterComponent}
+      {path: 'register', component: RegisterComponent},
+      {path: 'signin', component: SigninComponent}
     ])
   ],
   providers: [ RegisterService ],
