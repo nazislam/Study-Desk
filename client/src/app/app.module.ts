@@ -6,11 +6,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
-import { RegisterService } from './components/register/register.service';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { SigninComponent } from './components/signin/signin.component';
 
+import { RegisterService } from './services/register.service';
 
 @NgModule({
   declarations: [

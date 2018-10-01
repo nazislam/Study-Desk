@@ -2,9 +2,22 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const path = require('path');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const flash = require('express-flash');
 const port = process.env.PORT || 3000;
 
 const registerRouter = require('./register/register');
+
+app.use(cookieParser());
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(flash());
+require('./config/passport')(app);
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
