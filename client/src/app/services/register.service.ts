@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../../models/user.model';
+import { User } from '../models/user.model';
 import { Http } from '@angular/http';
 import { Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/Rx';
@@ -30,5 +30,17 @@ export class RegisterService {
       .map(this.extractData)
       .catch(this.handleError);
   }
+
+  authenticateUser(user: User): Observable<any> {
+    // console.log('posting user: ', user);
+    let body = JSON.stringify(user);
+    let headers = new Headers({ 'Content-Type': 'application/json'});
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http.post('http://localhost:3000/signin', body, options)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
 
 }
